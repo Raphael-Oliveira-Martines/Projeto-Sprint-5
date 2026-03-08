@@ -6,7 +6,6 @@ Este aplicativo web permite explorar dados de anúncios de carros usados nos EUA
 ## Funcionalidades
 - Histogramas interativos
 - Gráficos de dispersão
-- Filtros para explorar os dados
 
 ## Como executar
 1. Clone o repositório
