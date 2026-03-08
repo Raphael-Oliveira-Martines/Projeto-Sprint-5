@@ -10,12 +10,12 @@ grafico_disper = st.checkbox("Criar gráfico de dispersão")
 
 if grafico_hist:
     st.write(
-        'Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
+        'Grágico histograma para o conjunto de dados de anúncios de vendas de carros')
     fig = px.histogram(df_veiculos, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
 
 if grafico_disper:
     st.write(
-        'Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
+        'Gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
     fig = px.scatter(df_veiculos, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
