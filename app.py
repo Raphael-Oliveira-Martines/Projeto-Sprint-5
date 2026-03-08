@@ -12,10 +12,16 @@ if grafico_hist:
     st.write(
         'Grágico histograma para o conjunto de dados de anúncios de vendas de carros')
     fig = px.histogram(df_veiculos, x="odometer")
+    fig.update_layout(
+        xaxis_title="Quilometragem (km)",
+        yaxis_title="Quantidade de Carros"
+    )
     st.plotly_chart(fig, use_container_width=True)
 
 if grafico_disper:
     st.write(
         'Gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
-    fig = px.scatter(df_veiculos, x="odometer", y="price")
+    fig = px.scatter(df_veiculos, x="odometer", y="price",
+                     labels={'odometer': 'Quilometragem (km)',
+                             'price': 'Preço (R$)'})
     st.plotly_chart(fig, use_container_width=True)
